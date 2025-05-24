@@ -1,14 +1,12 @@
-let age = 20;
-let female = true;
 
-if (age >= 18 && female) {
-    console.log("Argument found"); // or "Arguments found", be consistent
+
+const args = process.argv.slice(2);
+
+if (args.length === 0) {
+  console.log("No argument");
+} else if (args.length === 1) {
+  console.log("Argument found");
 } else {
-    console.log("No argument");
+  console.log("Arguments found");
 }
 
-if (age >= 18 || female) {
-    console.log("Argument found");
-} else {
-    console.log("No argument");
-}
